@@ -1,0 +1,8 @@
+
+{{ if .IsTranslated }}
+<p>{{ i18n "translations" }}:
+  {{ range .Translations }}
+    <a href="{{ .Permalink }}"> {{ .Language.LanguageName }}</a>
+  {{ end}}
+</p>
+{{ end }}
