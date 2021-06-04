@@ -1,4 +1,12 @@
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://github.com/htr3n/hyde-hyde/blob/master/LICENSE.md) ![GitHub release](https://img.shields.io/github/release/htr3n/hyde-hyde.svg) ![GitHub stars](https://img.shields.io/github/stars/htr3n/hyde-hyde.svg) ![GitHub forks](https://img.shields.io/github/forks/htr3n/hyde-hyde.svg) ![GitHub issues](https://img.shields.io/github/issues/htr3n/hyde-hyde.svg) ![GitHub issues closed](https://img.shields.io/github/issues-closed/htr3n/hyde-hyde.svg)
+
+# j-hyde
+
+This is a [Hyde-hyde](#Hyde-hyde) fork. Primary difference is the internationalization support (i18n),
+so you can include different languages in the theme itself.
+
+It will continue to receive updates from Hyde-hyde.
+
+Support for theme flexibility is considered for the future.
 
 # Hyde-hyde
 
