@@ -1,24 +1,16 @@
-## Basic Configuration
-baseurl = "https://example.com/"
-languageCode = "en"
-
-title = "Title"
+## Basic Configuration 
+baseURL = "www.example.com"
+defaultContentLanguage = "pt-br" #required if you are going to use more than one language
+themesDir = "themes"
 theme = "hyde-hyde"
-
-## Hugo Built-in Features
-# disqusShortname = "your-disqus-shortname"
-# googleAnalytics = "your-google-analytics-id"
-# enableRobotsTXT = true
-
-# summarylength = 30
-
-#paginate = 5
+author = "Author Name"
+pluralizeListTitles = false
 
 ## Site Settings
 [params]
-    author = "Author"
+    author = "Author Name"
     title = "Title"
-    # description = "..."
+    mainSections = "posts" 
     authorimage = "/img/hugo.png"
     dateformat = "Jan 2, 2006"
 
@@ -43,35 +35,38 @@ theme = "hyde-hyde"
     # Table of contents
     #toc = none, "hugo", or "tocbot"
 
-## Social Accounts
-[params.social]
-    github = "<username>"
-    instagram = "<username>"
-    xing = "<username>"
-    linkedin = "<username>"
-    twitter = "<username>"
-    facebook = "<username>"
-    microblog = "<username>"
-    stackoverflow = "<username>"
-    telegram = "<username>"
-    # orcid = "<xxxx-xxxx-xxxx-xxxx>"
-    email = "your-email@example.com"
-    # gravatar = "your-email@example.com"
-    # pgpkey = "<path-to-your-key-in-/static>"
+## Hugo Built-in Features
+# disqusShortname = "your-disqus-shortname"
+# googleAnalytics = "your-google-analytics-id"
+# enableRobotsTXT = true
 
-## Main Menu
-[[menu.main]]
-    name = "Posts"
-    weight = 100
-    identifier = "posts"
-    url = "/posts/"
-[[menu.main]]
-    name = "Portfolio"
-    identifier = "portfolio"
-    weight = 200
-    url = "/portfolio/"
-[[menu.main]]
-    name = "About"
-    identifier = "about"
-    weight = 300
-    url = "/about/"
+# summarylength = 30
+
+#paginate = 5
+
+relatedPosts = true
+
+[languages]
+  [languages.pt-br]
+    description = "Descrição no idioma settado em defaultContentLanguage"
+    languageName = "Português do Brasil"
+    weight = 5
+  [languages.en]
+    description  = "Description text in the sidebar in English"
+    languageName = "English"
+    weight = 10 
+
+[languages.pt-br.Menus]
+      main = [
+    { Name = "Posts", URL = "/", weight = 5 },
+    { Name = "Sobre Mim", URL = "/about/", weight = 10 },
+    { Name = "Versão em Inglês", URL = "/en", weight = 100 }
+    ]
+
+
+[languages.en.Menus]
+      main = [
+    { Name = "Posts", URL = "/en", weight = 5 },
+    { Name = "About me", URL = "/en/about", weight = 10 },
+    { Name = "Portuguese Version", URL = "/", weight = 100 }
+  ]

@@ -1,0 +1,5 @@
+- id: translations
+  translation: "Traduções"
+
+- id: readingTime
+  translation: "min de leitura"
