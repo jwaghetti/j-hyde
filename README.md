@@ -105,6 +105,37 @@ __`Hyde-hyde`__ essentially inherits most of Hyde's [options](https://github.com
       	gravatar = "your.email@domain.com"
       ```
 
+### Adding support to multiple languages
+
+The `config.toml` available in the `exampleSite` shows how to support Brazilian Portuguese (pt-br) and English (en) content using menu links.
+
+```
+[languages]
+  [languages.pt-br]
+    description = "Descrição no idioma settado em defaultContentLanguage"
+    languageName = "Português do Brasil"
+    weight = 5
+  [languages.en]
+    description  = "Description text in the sidebar in English"
+    languageName = "English"
+    weight = 10 
+
+[languages.pt-br.Menus]
+      main = [
+    { Name = "Posts", URL = "/", weight = 5 },
+    { Name = "Sobre Mim", URL = "/about/", weight = 10 },
+    { Name = "Versão em Inglês", URL = "/en", weight = 100 }
+    ]
+
+
+[languages.en.Menus]
+      main = [
+    { Name = "Posts", URL = "/en", weight = 5 },
+    { Name = "About me", URL = "/en/about", weight = 10 },
+    { Name = "Portuguese Version", URL = "/", weight = 100 }
+  ]
+```
+
 ### Customisations
 
 * Most of the customisable SCSS styles in [_assets/scss/hyde-hyde_](https://github.com/htr3n/hyde-hyde/blob/master/assets/scss/hyde-hyde) and Hugo templates in [_hyde-hyde/layouts_](https://github.com/htr3n/hyde-hyde/blob/master/layouts) are modularised and can be altered/adapted easily.
